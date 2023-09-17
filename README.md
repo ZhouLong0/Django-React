@@ -1,20 +1,32 @@
 # Django-React
 ## Setup
-
+### Start a project
+`django-admin startproject first_project`
 Creation of new application api -> need to add it into project.settings -> INSTALLED APP
+`django-admin startapp api`
 
 Creation of new urls.py in the new app in order to let it manage the views
 
 In project.urls use   `path('', include('api.urls'))`   in order to redirect the manage of path starting with '' to api.urls
+```
+from django.urls import path
+from .views import main
 
-in order to call a view use    `path('', .view.function)`
+urlpatterns = [
+    path('', main)      # calling a view (main)
+]
+
+```
 
 each time a module or database (models) has been modified
+```
 python manage.py makemigrations 
 python manage.py migrate
+```
 
-### to run
-python manage.py runserver 
+
+### To run the project on localhost
+`python manage.py runserver ``
 
 ## Django REST
 ### Models
