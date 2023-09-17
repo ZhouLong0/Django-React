@@ -1,5 +1,6 @@
 # Django-React
-<h1>Setup<h1>
+<h3>Setup</h3>
+
 Creation of new application api -> need to add it into project.settings -> INSTALLED APP
 
 Creation of new urls.py in the new app in order to let it manage the views
